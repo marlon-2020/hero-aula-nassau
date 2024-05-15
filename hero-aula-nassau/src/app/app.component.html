@@ -1,0 +1,11 @@
+<section class="container" *ngIf="!listaHerois">
+  <p>Não há heróis</p>
+</section>
+  
+<section class="container" *ngIf="listaHerois">
+  <div class="card" *ngFor="let heroi of listaHerois">
+    <img src="{{ heroi.images.lg }}" alt="">
+    <h1 fonte>{{ heroi.name | uppercase }}</h1>
+    <p fonte>{{ heroi.work.occupation | desocupado }}</p>
+  </div>
+</section>
